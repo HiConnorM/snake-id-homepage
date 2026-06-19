@@ -7,9 +7,6 @@ import { ArrowRight, Camera, BookOpen, Gamepad2, Route, AlertCircle, GraduationC
 import { FloatingNav } from '@/components/floating-nav'
 import { Footer } from '@/components/sections/footer'
 
-const HEAD = '/images/snake/snake-head-neck.jpg'
-const BODY = '/images/snake/snake-body.jpg'
-
 /* ── Primitives ─────────────────────────────────────────────────── */
 
 function Eyebrow({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -79,49 +76,7 @@ export function HomePage() {
       */}
       <main className="relative w-full overflow-hidden bg-background">
 
-        {/* ── SNAKE HEAD ──────────────────────────────────────────
-            Plain <img> tag — no Next.js wrapper divs, no stacking
-            context shenanigans. mix-blend-mode:multiply blends the
-            white studio bg against the ivory page background directly.
-        */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={HEAD}
-          alt=""
-          aria-hidden="true"
-          draggable={false}
-          className="pointer-events-none absolute z-0 select-none"
-          style={{
-            right: '-2%',
-            top: 0,
-            width: '40vw',
-            maxWidth: 640,
-            mixBlendMode: 'multiply',
-          }}
-        />
 
-        {/* ── SNAKE BODY ──────────────────────────────────────────
-            Single image spanning the full page height. At 76vw wide
-            and aspect ratio 2897:6311 (≈0.459), height ≈ 76/0.459 ≈ 165vw.
-            The page content is ~240vw tall, so we start at top:4% and
-            the body fills about 70% of the content area — covering hero
-            through mission. Anchored so its horizontal centre sits at
-            ~68% from the left, leaving clear left and right text lanes.
-        */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={BODY}
-          alt=""
-          aria-hidden="true"
-          draggable={false}
-          className="pointer-events-none absolute z-0 select-none"
-          style={{
-            left: '28%',
-            top: '3%',
-            width: '76vw',
-            mixBlendMode: 'multiply',
-          }}
-        />
 
         {/* ── CONTENT ROWS ─────────────────────────────────────────
             Each row uses a 3-col grid: [left-pad | content | right-pad]

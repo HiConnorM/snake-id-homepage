@@ -92,23 +92,24 @@ function SnakeSegment({
         ...positional,
       }}
       initial={reduce ? false : { opacity: 0, scale: 0.98 }}
-      whileInView={{ opacity: config.opacity ?? 1, scale: 1 }}
-      viewport={{ once: true, margin: '-10%' }}
-      transition={{ duration: 1, ease: 'easeOut' }}
+      animate={{ opacity: config.opacity ?? 1, scale: 1 }}
+      transition={{ duration: 1, ease: 'easeOut', delay: 0.1 + index * 0.05 }}
     >
-      <Image
-        src={BODY}
-        alt=""
-        width={BODY_W}
-        height={BODY_H}
-        sizes="(max-width: 768px) 0px, 52vw"
-        loading={index < 1 ? 'eager' : 'lazy'}
-        className={cn(
-          'snake-blend h-auto w-full select-none drop-shadow-[0_30px_40px_rgba(16,43,38,0.18)]',
-          config.flip && '-scale-x-100',
-        )}
-        draggable={false}
-      />
+      <div className="snake-blend-bg">
+        <Image
+          src={BODY}
+          alt=""
+          width={BODY_W}
+          height={BODY_H}
+          sizes="(max-width: 768px) 0px, 52vw"
+          loading={index < 1 ? 'eager' : 'lazy'}
+          className={cn(
+            'snake-blend h-auto w-full select-none',
+            config.flip && '-scale-x-100',
+          )}
+          draggable={false}
+        />
+      </div>
     </motion.div>
   )
 }
@@ -161,7 +162,7 @@ function SnakeHead({ reduce }: { reduce: boolean | null }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
     >
-      <div className="relative">
+      <div className="relative snake-blend-bg">
         <Image
           src={HEAD}
           alt=""
@@ -169,7 +170,7 @@ function SnakeHead({ reduce }: { reduce: boolean | null }) {
           height={1596}
           priority
           sizes="(max-width: 768px) 60vw, 34vw"
-          className="snake-blend h-auto w-full select-none drop-shadow-[0_24px_36px_rgba(16,43,38,0.22)]"
+          className="snake-blend h-auto w-full select-none"
           draggable={false}
         />
         {/* Forked tongue flick — anchored near the mouth (lower-left of head) */}
@@ -229,7 +230,7 @@ export function SnakeDivider({
   return (
     <div
       aria-hidden="true"
-      className={cn('relative h-28 overflow-hidden md:hidden', className)}
+      className={cn('snake-blend-bg relative h-28 overflow-hidden md:hidden', className)}
     >
       <Image
         src={BODY}

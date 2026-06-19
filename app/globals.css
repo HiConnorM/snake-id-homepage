@@ -87,7 +87,15 @@
 
 @layer utilities {
   /* Drops the white studio background from the snake photos so they
-     blend onto the ivory page as one continuous snake. */
+     blend onto the ivory page as one continuous snake.
+     The wrapper paints an ivory backdrop and isolates a stacking
+     context; the image then multiplies its white pixels against that
+     ivory (white * ivory = ivory) so the studio background disappears
+     even when the segment is rotated/transformed. */
+  .snake-blend-bg {
+    background-color: #f4f0e6;
+    isolation: isolate;
+  }
   .snake-blend {
     mix-blend-mode: multiply;
   }

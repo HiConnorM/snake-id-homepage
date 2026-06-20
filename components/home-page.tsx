@@ -180,49 +180,50 @@ export function HomePage() {
             White: TOP-RIGHT triangle (above the wave's upper edge).
             Content: TOP-RIGHT, pt~5%.
         ════════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-2.jpg" widthPx={2549} heightPx={762}>
-          <section
-            aria-labelledby="paths-heading"
-            className="flex h-full flex-col justify-end"
-            style={{ padding: '0 0 4% 5vw' }}
+        {/* S-2 snake image — no content inside, snake band fills the full frame */}
+        <SnakeRow src="/images/snake/section-2.jpg" widthPx={2549} heightPx={762} />
+
+        {/* "What brings you here?" lives BETWEEN S-2 and S-3 in normal flow —
+            completely outside the snake images so it never overlaps */}
+        <section
+          aria-labelledby="paths-heading"
+          className="w-full px-[6vw] py-16"
+        >
+          <h2
+            id="paths-heading"
+            className="font-serif font-semibold leading-[0.93] text-cypress-text"
+            style={{ fontSize: 'clamp(2.6rem,4vw,4.6rem)' }}
           >
-            <div style={{ width: '24vw', minWidth: 210 }}>
-              <h2
-                id="paths-heading"
-                className="font-serif font-semibold leading-[0.93] text-cypress-text"
-                style={{ fontSize: 'clamp(2.4rem,3.8vw,4.4rem)' }}
-              >
-                What brings<br />you here?
-              </h2>
-              <ul className="mt-7 flex flex-wrap gap-4">
-                {PATHS.map((p) => {
-                  const Icon = p.icon
-                  return (
-                    <li key={p.href}>
-                      <Link
-                        href={p.href}
-                        className="group flex flex-col items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cypress"
-                      >
-                        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-cypress/20 bg-field-guide text-cypress shadow-sm transition-all group-hover:-translate-y-1 group-hover:border-copper group-hover:text-copper">
-                          <Icon className="h-[1.1rem] w-[1.1rem]" strokeWidth={1.5} aria-hidden="true" />
-                        </span>
-                        <span className="max-w-[9ch] text-center text-[0.7rem] font-semibold leading-snug text-cypress-text/70">
-                          {p.label}
-                        </span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          </section>
-        </SnakeRow>
+            What brings<br />you here?
+          </h2>
+          <ul className="mt-8 flex flex-wrap gap-6">
+            {PATHS.map((p) => {
+              const Icon = p.icon
+              return (
+                <li key={p.href}>
+                  <Link
+                    href={p.href}
+                    className="group flex flex-col items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cypress"
+                  >
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-cypress/20 bg-field-guide text-cypress shadow-sm transition-all group-hover:-translate-y-1 group-hover:border-copper group-hover:text-copper">
+                      <Icon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+                    </span>
+                    <span className="max-w-[9ch] text-center text-[0.72rem] font-semibold leading-snug text-cypress-text/70">
+                      {p.label}
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
 
         {/* ════════════════════════════════════════════════════════
             S-3 — 2549×1037 → 40.68%
             C-curve fully on LEFT. RIGHT side entirely clear.
             Content: RIGHT, vertically centred.
         ════════════════════════════════════════════════════════ */}
+        {/* S-3: C-curve on LEFT, right side open */}
         <SnakeRow src="/images/snake/section-3.jpg" widthPx={2549} heightPx={1037}>
           <section
             aria-labelledby="what-we-do-heading"
@@ -249,19 +250,14 @@ export function HomePage() {
           </section>
         </SnakeRow>
 
-        {/* ════════════════════════════════════════════════════════
-            S-4 — 2549×1037 → 40.68%
-            Double-S. Inner pocket: centre-left, lower half.
-            Content: LEFT, bottom-aligned, pb~8%.
-        ════════════════════════════════════════════════════════ */}
+        {/* S-4: large arch — top-left open before arch rises */}
         <SnakeRow src="/images/snake/section-4.jpg" widthPx={2549} heightPx={1037}>
           <section
             aria-labelledby="school-heading"
-            className="flex h-full flex-col items-end justify-end"
-            style={{ padding: '0 5vw 8% 0' }}
+            className="flex h-full flex-col justify-start"
+            style={{ padding: '6% 0 0 5vw' }}
           >
-            {/* BOTTOM-RIGHT: inside the C-arch, right lower corner is open */}
-            <div style={{ width: '29vw', minWidth: 240 }}>
+            <div style={{ width: '28vw', minWidth: 230 }}>
               <Eyebrow>Snake School</Eyebrow>
               <h2
                 id="school-heading"
@@ -270,31 +266,24 @@ export function HomePage() {
               >
                 Where curiosity<br />takes the lead.
               </h2>
-              <p className="mt-5 text-[1rem] leading-relaxed text-cypress-text/60" style={{ maxWidth: '30ch' }}>
+              <p className="mt-5 text-[1rem] leading-relaxed text-cypress-text/60" style={{ maxWidth: '28ch' }}>
                 Interactive lessons, games, and challenges for young wildlife explorers.
               </p>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8">
                 <PrimaryBtn href="/snake-school">Enter Snake School</PrimaryBtn>
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-cypress/20 bg-field-guide text-cypress shadow-sm">
-                  <Gamepad2 className="h-[1.1rem] w-[1.1rem]" strokeWidth={1.5} aria-hidden="true" />
-                </span>
               </div>
             </div>
           </section>
         </SnakeRow>
 
-        {/* ════════════════════════════════════════════════════════
-            S-5 — 2589×1037 → 40.05%
-            Reverse-C on LEFT. RIGHT 55% is fully open white space.
-            Content: RIGHT, vertically centred. Width ~38vw.
-        ════════════════════════════════════════════════════════ */}
+        {/* S-5: reverse-C on left, top-right is open */}
         <SnakeRow src="/images/snake/section-5.jpg" widthPx={2589} heightPx={1037}>
           <section
             aria-labelledby="field-guide-heading"
-            className="flex h-full flex-col items-end justify-end"
-            style={{ padding: '0 5vw 5% 0' }}
+            className="flex h-full flex-col items-end justify-start"
+            style={{ padding: '6% 5vw 0 0' }}
           >
-            <div style={{ width: '35vw', minWidth: 260 }}>
+            <div style={{ width: '34vw', minWidth: 260 }}>
               <Eyebrow>Snakes of Louisiana</Eyebrow>
               <h2
                 id="field-guide-heading"
@@ -303,19 +292,12 @@ export function HomePage() {
               >
                 Discover.<br />Learn.<br />Respect.
               </h2>
-              <p className="mt-5 text-[1rem] leading-relaxed text-cypress-text/60" style={{ maxWidth: '34ch' }}>
+              <p className="mt-5 text-[1rem] leading-relaxed text-cypress-text/60" style={{ maxWidth: '32ch' }}>
                 Browse our field guide to learn about local species and their
                 role in our ecosystem.
               </p>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8">
                 <PrimaryBtn href="/louisiana-snakes">Explore the Guide</PrimaryBtn>
-                <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-cypress/20 shadow-md">
-                  <Image
-                    src="/images/snakes/native-snake-1.png"
-                    alt="A native Louisiana snake" fill sizes="56px"
-                    className="object-cover"
-                  />
-                </div>
               </div>
             </div>
           </section>
@@ -330,9 +312,10 @@ export function HomePage() {
         <SnakeRow src="/images/snake/section-6.jpg" widthPx={2589} heightPx={1253}>
           <section
             aria-labelledby="mission-heading"
-            className="flex h-full flex-col items-end justify-end"
-            style={{ padding: '0 5vw 7% 0' }}
+            className="flex h-full flex-col justify-start"
+            style={{ padding: '6% 0 0 5vw' }}
           >
+            {/* TOP-LEFT: S-loop body leaves upper-left open in this section */}
             <div style={{ width: '28vw', minWidth: 240 }}>
               <Eyebrow>Our Mission</Eyebrow>
               <h2

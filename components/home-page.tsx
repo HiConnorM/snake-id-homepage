@@ -185,7 +185,7 @@ export function HomePage() {
           snakeL={SNAKE_L}
           objectFit="contain"
           marginTop={-74}
-          marginLeft={138}
+          marginLeft="18.6vw"
         >
           <section aria-labelledby="hero-heading">
             {/* Content lives in the LEFT margin (0 → SNAKE_L) */}
@@ -245,7 +245,7 @@ export function HomePage() {
             = right margin of viewport outside SNAKE_W.
             Content: right margin.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-2.jpg" widthPx={2549} heightPx={762} marginLeft={183}>
+        <SnakeRow src="/images/snake/section-2.jpg" widthPx={2549} heightPx={762} marginLeft="18.9vw">
           <section aria-labelledby="paths-heading">
             <div
               className="absolute z-10"
@@ -288,7 +288,7 @@ export function HomePage() {
             Image centred → right side of image aligns near right
             margin. Content: right margin OR inside image right zone.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-3.jpg" widthPx={2549} heightPx={1037} marginLeft={183}>
+        <SnakeRow src="/images/snake/section-3.jpg" widthPx={2549} heightPx={1037} marginLeft="18.9vw">
           <section aria-labelledby="what-we-do-heading">
             <div
               className="absolute z-10"
@@ -321,7 +321,7 @@ export function HomePage() {
             Image centred at SNAKE_L → hollow sits ~left-centre viewport.
             Content: left margin.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-4.jpg" widthPx={2549} heightPx={1037} marginLeft={183}>
+        <SnakeRow src="/images/snake/section-4.jpg" widthPx={2549} heightPx={1037} marginLeft="18.8vw">
           <section aria-labelledby="school-heading">
             <div
               className="absolute z-10"
@@ -347,13 +347,13 @@ export function HomePage() {
           </section>
         </SnakeRow>
 
-        {/* ══════════════════════════════════════════════════════
+        {/* ═══════��══════════════════════════════════════════════
             S-5 — 2589×1037 (40.05% aspect)
             Reverse-C on left. Open pocket = lower-right of image.
             Right of centred image → right side viewport margin.
             Content: right margin, bottom.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-5.jpg" widthPx={2589} heightPx={1037} marginLeft={170}>
+        <SnakeRow src="/images/snake/section-5.jpg" widthPx={2589} heightPx={1037} marginLeft="17.6vw">
           <section aria-labelledby="field-guide-heading">
             <div
               className="absolute z-10"
@@ -386,7 +386,7 @@ export function HomePage() {
             = left margin of viewport.
             Content: left margin, bottom.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-6.jpg" widthPx={2589} heightPx={1253} marginLeft={170}>
+        <SnakeRow src="/images/snake/section-6.jpg" widthPx={2589} heightPx={1253} marginLeft="17.6vw">
           <section aria-labelledby="mission-heading">
             <div
               className="absolute z-10"
@@ -419,7 +419,7 @@ export function HomePage() {
             Clear: left ~40% top half = left margin.
             Content: left margin, top.
         ══════════════════════════════════════════════════════ */}
-        <SnakeRow src="/images/snake/section-7-tail.jpg" widthPx={2589} heightPx={1037} marginLeft={152}>
+        <SnakeRow src="/images/snake/section-7-tail.jpg" widthPx={2589} heightPx={1037} marginLeft="17.6vw">
           <section aria-labelledby="newsletter-heading">
             <div
               className="absolute z-10"

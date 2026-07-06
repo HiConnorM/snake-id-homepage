@@ -249,12 +249,12 @@ export function HomePage() {
           <section aria-labelledby="paths-heading">
             <div
               className="absolute z-10"
-              style={{ right: '2vw', top: '6%', width: '13vw', minWidth: 160 }}
+              style={{ right: 'calc(2vw + 588px)', left: '7px', top: '6%', width: '13vw', minWidth: 160 }}
             >
               <h2
                 id="paths-heading"
                 className="font-serif font-semibold leading-[0.9] text-cypress-text"
-                style={{ fontSize: 'clamp(1.4rem,2vw,2.4rem)' }}
+                style={{ fontSize: '9px' }}
               >
                 What brings<br />you here?
               </h2>
@@ -292,7 +292,7 @@ export function HomePage() {
           <section aria-labelledby="what-we-do-heading">
             <div
               className="absolute z-10"
-              style={{ right: '2vw', top: '20%', width: '13vw', minWidth: 160 }}
+              style={{ right: 'calc(2vw + 24px)', top: 'calc(20% - 30px)', width: '13vw', minWidth: 160 }}
             >
               <Eyebrow>—</Eyebrow>
               <h2
@@ -325,7 +325,7 @@ export function HomePage() {
           <section aria-labelledby="school-heading">
             <div
               className="absolute z-10"
-              style={{ left: '3vw', top: '30%', width: '12vw', minWidth: 160 }}
+              style={{ left: 'calc(3vw + 69px)', right: '14px', top: 'calc(30% - 51px)', width: '12vw', minWidth: 160 }}
             >
               <Eyebrow>Snake School</Eyebrow>
               <h2
@@ -357,7 +357,7 @@ export function HomePage() {
           <section aria-labelledby="field-guide-heading">
             <div
               className="absolute z-10"
-              style={{ right: '2vw', bottom: '-4%', width: '13vw', minWidth: 160 }}
+              style={{ right: 'calc(2vw + 97px)', bottom: 'calc(-4% + 23px)', width: '13vw', minWidth: 160 }}
             >
               <Eyebrow>Field Guide</Eyebrow>
               <h2
@@ -390,7 +390,7 @@ export function HomePage() {
           <section aria-labelledby="mission-heading">
             <div
               className="absolute z-10"
-              style={{ left: '3vw', bottom: '8%', width: '12vw', minWidth: 155 }}
+              style={{ left: 'calc(3vw + 115px)', right: '15px', bottom: '8%', width: '12vw', minWidth: 155 }}
             >
               <Eyebrow>Our Mission</Eyebrow>
               <h2
@@ -423,7 +423,7 @@ export function HomePage() {
           <section aria-labelledby="newsletter-heading">
             <div
               className="absolute z-10"
-              style={{ left: '3vw', top: '8%', width: '12vw', minWidth: 155 }}
+              style={{ left: '401px', top: '8%', width: '12vw', minWidth: 155, textAlign: 'center' }}
             >
               <h2
                 id="newsletter-heading"

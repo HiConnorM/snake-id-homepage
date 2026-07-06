@@ -357,9 +357,9 @@ export function HomePage() {
           <section aria-labelledby="field-guide-heading">
             <div
               className="absolute z-10"
-              style={{ right: '2vw', bottom: '8%', width: '13vw', minWidth: 160 }}
+              style={{ right: '2vw', bottom: '-4%', width: '13vw', minWidth: 160 }}
             >
-              <Eyebrow>Snakes of Louisiana</Eyebrow>
+              <Eyebrow>Field Guide</Eyebrow>
               <h2
                 id="field-guide-heading"
                 className="mt-3 font-serif font-semibold leading-[0.88] text-cypress-text"
